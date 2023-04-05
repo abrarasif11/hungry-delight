@@ -20,7 +20,7 @@ const Banner1 = () => {
                             </h2>
                             <p className="max-w-xl mb-4 text-base text-white md:text-xl">
                                 We are thrilled to have you as our guest. Our team is dedicated to providing you with an unforgettable dining experience that is filled with delicious food, exceptional service, and warm hospitality. Sit back, relax, and let us take care of everything. Thank you for choosing us, and we hope you enjoy your time here!
-                                Order Your Favorite Dishes Online and Enjoy a Delicious Meal in the Comfort of Your Own Home.
+                                {/* Order Your Favorite Dishes Online and Enjoy a Delicious Meal in the Comfort of Your Own Home. */}
                             </p>
                             {/* <Link
                                 to="/appointment"
