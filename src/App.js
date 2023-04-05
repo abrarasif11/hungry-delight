@@ -17,10 +17,6 @@ function App() {
         element : <Home></Home>
       },
       {
-        path : '/',
-        element : <Home></Home>
-      },
-      {
         path : '/contact',
         element : <Contact></Contact>
       },
