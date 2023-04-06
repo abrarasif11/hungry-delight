@@ -4,6 +4,7 @@ import Banner2 from './Banner2';
 import Category from '../Categories/Category';
 import FoodGallery from '../FoodGallery/FoodGallery';
 import { Link, useNavigate } from 'react-router-dom';
+import Banner3 from './Banner3';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Home = () => {
             </div>
             <p className='text-4xl font-poppins font-bold mt-20 text-black'>Food Gallery</p>
             <FoodGallery></FoodGallery>
-            
+            <Banner3></Banner3>
         </div>
     );
 };
