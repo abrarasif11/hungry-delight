@@ -29,7 +29,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </div> */}
-            <div className="py-6 text-sm text-center dark:text-gray-400">© 2023 Hungry Delight. All rights reserved.</div>
+            <div className="py-6 text-lg font-poppins font-medium text-center dark:text-gray-400">© 2023 Hungry Delight. All rights reserved.</div>
         </footer>
     );
 };

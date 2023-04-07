@@ -5,6 +5,7 @@ import Home from './component/Home/Home';
 import Contact from './component/Contact/Contact';
 import Items from './component/Items/Items';
 import AllItems from './component/Items/AllItems';
+import About from './component/About/About';
 
 function App() {
   const router = createBrowserRouter([
@@ -30,13 +31,13 @@ function App() {
       },
       {
         path : '/about',
-        element : <Home></Home>
+        element : <About></About>
       },
      ]
     }
   ])
   return (
-    <div className="App">
+    <div className="App overflow-x-hidden">
      <RouterProvider router={router}></RouterProvider>
     </div>
   );
