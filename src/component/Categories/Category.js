@@ -9,6 +9,7 @@ const Category = () => {
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
+    
     return (
         <div className='grid mx-10 sm:grid-cols-3 gap-3 ml-10 sm:ml-3  mt-10 mb-20'>
         {

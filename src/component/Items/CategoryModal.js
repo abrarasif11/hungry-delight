@@ -1,9 +1,9 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const AllItemsCategories = ({ categories, setCategories }) => {
-    const { name, price } = categories;
-    console.log(categories);
+const CategoryModal = ({ singleCategories, setSingleCategories }) => {
+    const { name, price } = singleCategories;
+    console.log(singleCategories);
     const handleBooking = event => {
         event.preventDefault()
         const form = event.target;
@@ -14,7 +14,7 @@ const AllItemsCategories = ({ categories, setCategories }) => {
         const formValue = { name, number, price, meeting };
         console.log(formValue);
         toast.success("Booking Confirm Successfully", { autoClose: 800 });
-        setCategories(null)
+        setSingleCategories(null)
     }
     return (
         <>
@@ -36,4 +36,4 @@ const AllItemsCategories = ({ categories, setCategories }) => {
     );
 };
 
-export default AllItemsCategories;
+export default CategoryModal;

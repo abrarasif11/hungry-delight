@@ -10,35 +10,37 @@ import About from './component/About/About';
 function App() {
   const router = createBrowserRouter([
     {
-     path : '/',
-     element : <Main></Main>,
-     children : [
-      {
-        path : '/',
-        element : <Home></Home>
-      },
-      {
-        path : '/contact',
-        element : <Contact></Contact>
-      },
-      {
-        path : '/items',
-        element : <Items></Items>
-      },
-      {
-        path : '/allItems',
-        element : <AllItems></AllItems>
-      },
-      {
-        path : '/about',
-        element : <About></About>
-      },
-     ]
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        {
+          path: '/',
+          element: <Home></Home>
+        },
+        {
+          path: '/contact',
+          element: <Contact></Contact>
+        },
+        {
+          path: '/foodItems/:id',
+          loader: ({ params }) =>
+            fetch(`http://localhost:5000/foodItems/${params.id}`),
+          element: <Items></Items>
+        },
+        {
+          path: '/allItems',
+          element: <AllItems></AllItems>
+        },
+        {
+          path: '/about',
+          element: <About></About>
+        },
+      ]
     }
   ])
   return (
     <div className="App overflow-x-hidden">
-     <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
