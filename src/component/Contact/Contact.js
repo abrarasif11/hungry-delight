@@ -1,5 +1,6 @@
 import React from 'react';
 import contact from '../../assests/Black Purple Boy with Laptop Illustration Safer Internet Day Poster.gif'
+import { toast } from 'react-toastify';
 const Contact = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -8,17 +9,18 @@ const Contact = () => {
         const email = form.email.value;
         const message = form.message.value;
         console.log({ name, email, message });
-        // toast.success('Thank You!!!')
+        toast.success("Thank You", { autoClose: 800 });
+        form.reset();
     }
     return (
-        <section class="min-h-screen  font-poppins bg-white dark:bg-gray-900">
+        <section class="min-h-screen  font-poppins bg-white text-black dark:bg-gray-900">
             <div class="container px-6 py-10 mx-auto">
                 <div class="lg:flex lg:items-center lg:-mx-10">
                     <div class="lg:w-1/2 lg:mx-10">
                         <h1 class="text-3xl font-semibold text-gray-800 capitalize dark:text-white lg:text-4xl">Contact Us!</h1>
 
                         <p class="mt-4 text-gray-500 dark:text-gray-400">
-                            Drop a suggestion, feedback, opportunities or we can colaborate on a project. Please mention your contact details if you are expecting a reply.
+                        "Contact us to make a reservation or for any inquiries. We look forward to hearing from you!"
                         </p>
 
                         <form onSubmit={handleSubmit} class="mt-12 ml-10">
@@ -36,7 +38,7 @@ const Contact = () => {
                                 <label for='message' class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
                                 <textarea name='message' class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Message"></textarea>
                             </div>
-                            <button class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-800 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                            <button class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#FF8400] rounded-md hover:bg-[#EBB02D] focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                                 Submit
                             </button>
                         </form>
