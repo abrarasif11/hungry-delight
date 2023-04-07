@@ -6,6 +6,8 @@ import Contact from './component/Contact/Contact';
 import Items from './component/Items/Items';
 import AllItems from './component/Items/AllItems';
 import About from './component/About/About';
+import Loader from './component/Loader/Loader';
+import ErrorPage from './component/ErrorPage/ErrorPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -36,11 +38,15 @@ function App() {
           element: <About></About>
         },
       ]
-    }
+    },
+    {
+      path: '*',
+      element: <ErrorPage></ErrorPage>
+    },
   ])
   return (
     <div className="App overflow-x-hidden">
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider fallbackElement={<Loader></Loader>} router={router}></RouterProvider>
     </div>
   );
 }
