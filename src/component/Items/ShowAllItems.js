@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShowAllItems = ({allItem}) => {
+const ShowAllItems = ({allItem, setCategories}) => {
     const {picture,name,price} = allItem
     return (
         <div className="max-w-xs p-6 rounded-md mb-10 shadow-md bg-white text-black font-poppins">
@@ -9,7 +9,11 @@ const ShowAllItems = ({allItem}) => {
                 <span className="block text-xl font-semibold tracking-widest uppercase dark:text-violet-400">{name}</span>
                 <h2 className="text-lg font-semibold tracking-wide">Price : {price}</h2>
             </div>
-            <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#FF8400] hover:bg-[#EBB02D] text-black">Book Now</button>
+            <label 
+                 htmlFor="order-modal" type="button"
+                 className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#FF8400] hover:bg-[#FFD93D] text-black"
+                 onClick={() => setCategories(allItem)}
+                 >Book Now</label>
         </div>
     );
 };

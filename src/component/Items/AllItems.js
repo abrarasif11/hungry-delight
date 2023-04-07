@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ShowAllItems from './ShowAllItems';
+import AllItemsCategories from './AllItemsCategories';
 
 const AllItems = () => {
     const [allItems, setAllItems] = useState([]);
-
+    const [categories, setCategories] = useState(null)
     useEffect(() => {
         fetch('http://localhost:5000/allFoodItems')
             .then(res => res.json())
@@ -17,10 +18,21 @@ const AllItems = () => {
                     allItems.map(allItem => <ShowAllItems
                         key={allItem.id}
                         allItem={allItem}
-                    
+                        setCategories={setCategories}
                     ></ShowAllItems>)
                 }
-        </div>
+            </div>
+            {
+                <div>
+                    {
+                        categories &&
+                        <AllItemsCategories
+                            categories={categories}
+                            setCategories={setCategories}
+                        ></AllItemsCategories>
+                    }
+                </div>
+            }
         </div>
     );
 };
