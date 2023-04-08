@@ -6,7 +6,7 @@ const AllItems = () => {
     const [allItems, setAllItems] = useState([]);
     const [categories, setCategories] = useState(null)
     useEffect(() => {
-        fetch('http://localhost:5000/allFoodItems')
+        fetch('https://hungry-delight-server.vercel.app/allFoodItems')
             .then(res => res.json())
             .then(data => setAllItems(data))
     }, [])

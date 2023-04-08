@@ -26,7 +26,7 @@ function App() {
         {
           path: '/foodItems/:id',
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/foodItems/${params.id}`),
+            fetch(`https://hungry-delight-server.vercel.app/foodItems/${params.id}`),
           element: <Items></Items>
         },
         {
